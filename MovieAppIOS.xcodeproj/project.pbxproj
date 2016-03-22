@@ -13,6 +13,7 @@
 		040772DC1C9F37F6000372EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040772DB1C9F37F6000372EB /* Assets.xcassets */; };
 		040772DF1C9F37F6000372EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040772DD1C9F37F6000372EB /* LaunchScreen.storyboard */; };
 		040772EA1C9F37F6000372EB /* MovieAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040772E91C9F37F6000372EB /* MovieAppIOSTests.swift */; };
+		040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040863751CA0AE5B001B82CB /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		040772E51C9F37F6000372EB /* MovieAppIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040772E91C9F37F6000372EB /* MovieAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppIOSTests.swift; sourceTree = "<group>"; };
 		040772EB1C9F37F6000372EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040863751CA0AE5B001B82CB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				040772DB1C9F37F6000372EB /* Assets.xcassets */,
 				040772DD1C9F37F6000372EB /* LaunchScreen.storyboard */,
 				040772E01C9F37F6000372EB /* Info.plist */,
+				040863751CA0AE5B001B82CB /* RegistrationViewController.swift */,
 			);
 			path = MovieAppIOS;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */,
 				040772D71C9F37F6000372EB /* ViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
 			);
@@ -390,6 +394,7 @@
 				040772F01C9F37F6000372EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		040772F11C9F37F6000372EB /* Build configuration list for PBXNativeTarget "MovieAppIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +403,7 @@
 				040772F31C9F37F6000372EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
