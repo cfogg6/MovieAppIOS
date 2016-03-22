@@ -6,6 +6,7 @@
 //  Copyright © 2016 Corey Fogg. All rights reserved.
 //
 
+import Parse
 import UIKit
 
 class ViewController: UIViewController {
@@ -36,9 +37,18 @@ class ViewController: UIViewController {
 
     //MARK: Actions
     @IBAction func login(sender: UIButton) {
-        if(usernameTextField.text == "user" && passwordTextField.text == "pass") {
-        performSegueWithIdentifier("loginSegue", sender: "hello from login")
-        }
+        PFUser.logInWithUsernameInBackground(usernameTextField.text!, password: passwordTextField.text!, block: { (user, error) -> Void in
+            if ((user) != nil) {
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
+//                    self.presentViewController(viewController, animated: true, completion: nil)
+//                    
+//                })
+                self.performSegueWithIdentifier("loginSegue", sender: "hello from login")
+            } else {
+                //error
+            }
+        })
     }
     
     @IBAction func goToRegistration(sender: UIButton) {

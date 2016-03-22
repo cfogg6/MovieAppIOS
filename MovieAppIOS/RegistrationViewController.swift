@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class RegistrationViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +32,39 @@ class RegistrationViewController: UIViewController {
     }
     
     //Mark:Actions
+    @IBAction func registerClicked(sender: AnyObject) {
+        if (passwordTextField.text == confirmPasswordField.text) {
+            let user = PFUser()
+        
+            user.username = userTextField.text
+            user.password = passwordTextField.text
+            user.setObject(nameField.text!, forKey: "name")
+            user.email = emailField.text
+        
+            //3
+            user.signUpInBackgroundWithBlock { succeeded, error in
+                if (succeeded) {
+                    //The registration was successful, go to the    show profile
+                    self.performSegueWithIdentifier("registeredS    egue", sender: nil)
+                } else if let error = error {
+                    //Something bad has occurred
+                    let alertController = UIAlertController(title: "iOScreator", message:
+                        error.description, preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                    
+                    self.presentViewController(alertController, animated: true, completion: nil)
+
+                }
+            }
+        } else {
+            let alertController = UIAlertController(title: "iOScreator", message:
+                "Passwords do not match", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func cancelClicked(sender: AnyObject) {
         performSegueWithIdentifier("cancelClickedSegue", sender: "hello from registration")
     }
