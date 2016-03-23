@@ -38,7 +38,7 @@ class RegistrationViewController: UIViewController {
         
             user.username = userTextField.text
             user.password = passwordTextField.text
-            user.setObject(nameField.text!, forKey: "name")
+            user["name"] = nameField.text
             user.email = emailField.text
         
             //3

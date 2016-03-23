@@ -27,7 +27,9 @@
 		040772DF1C9F37F6000372EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040772DD1C9F37F6000372EB /* LaunchScreen.storyboard */; };
 		040772EA1C9F37F6000372EB /* MovieAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040772E91C9F37F6000372EB /* MovieAppIOSTests.swift */; };
 		0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */; };
+		0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578C1CA1E65C0073B8EB /* TabBarController.swift */; };
 		040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040863751CA0AE5B001B82CB /* RegistrationViewController.swift */; };
+		044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044760401CA21D0E0052CE11 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +67,9 @@
 		040772E91C9F37F6000372EB /* MovieAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppIOSTests.swift; sourceTree = "<group>"; };
 		040772EB1C9F37F6000372EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProfileViewController.swift; sourceTree = "<group>"; };
+		0408578C1CA1E65C0073B8EB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		040863751CA0AE5B001B82CB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		044760401CA21D0E0052CE11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		448149AB74E9D174D3921A60 /* Pods-MovieAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppIOS/Pods-MovieAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9BA5791E69F3D8B5CEF638CD /* Pods-MovieAppIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppIOS/Pods-MovieAppIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +136,8 @@
 				040772E01C9F37F6000372EB /* Info.plist */,
 				040863751CA0AE5B001B82CB /* RegistrationViewController.swift */,
 				0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */,
+				0408578C1CA1E65C0073B8EB /* TabBarController.swift */,
+				044760401CA21D0E0052CE11 /* EditProfileViewController.swift */,
 			);
 			path = MovieAppIOS;
 			sourceTree = "<group>";
@@ -330,7 +336,9 @@
 			files = (
 				040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */,
 				040772D71C9F37F6000372EB /* ViewController.swift in Sources */,
+				044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
+				0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */,
 				0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
