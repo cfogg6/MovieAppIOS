@@ -48,7 +48,7 @@ class EditProfileViewController: UIViewController {
         super.init(coder: aDecoder)
         
         // Initialize Tab Bar Item
-        tabBarItem = UITabBarItem(title: "Edit Profile", image: UIImage(named: "bucketTab"), tag: 0)
+        tabBarItem = UITabBarItem(title: "Edit Profile", image: UIImage(named: "Profile"), tag: 0)
     }
     
     //MARK: Actions

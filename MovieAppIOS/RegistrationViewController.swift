@@ -45,7 +45,7 @@ class RegistrationViewController: UIViewController {
             user.signUpInBackgroundWithBlock { succeeded, error in
                 if (succeeded) {
                     //The registration was successful, go to the    show profile
-                    self.performSegueWithIdentifier("registeredS    egue", sender: nil)
+                    self.performSegueWithIdentifier("registeredSegue", sender: nil)
                 } else if let error = error {
                     //Something bad has occurred
                     let alertController = UIAlertController(title: "iOScreator", message:

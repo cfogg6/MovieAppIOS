@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040490821CA19E9A00F61BA4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490811CA19E9A00F61BA4 /* AudioToolbox.framework */; };
 		040490841CA19EA200F61BA4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490831CA19EA200F61BA4 /* CFNetwork.framework */; };
 		040490861CA19EAD00F61BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490851CA19EAD00F61BA4 /* CoreGraphics.framework */; };
 		040490881CA19EB600F61BA4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490871CA19EB600F61BA4 /* CoreLocation.framework */; };
 		0404908A1CA19EBE00F61BA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490891CA19EBE00F61BA4 /* QuartzCore.framework */; };
 		0404908C1CA19EC500F61BA4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0404908B1CA19EC500F61BA4 /* Security.framework */; };
-		0404908E1CA19ECD00F61BA4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0404908D1CA19ECD00F61BA4 /* StoreKit.framework */; };
 		040490901CA19EDA00F61BA4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0404908F1CA19EDA00F61BA4 /* SystemConfiguration.framework */; };
 		040490921CA19EE600F61BA4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490911CA19EE600F61BA4 /* libz.tbd */; };
 		040490941CA19EF200F61BA4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 040490931CA19EF200F61BA4 /* libsqlite3.tbd */; };
@@ -29,7 +27,11 @@
 		0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */; };
 		0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578C1CA1E65C0073B8EB /* TabBarController.swift */; };
 		040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040863751CA0AE5B001B82CB /* RegistrationViewController.swift */; };
+		043ECDFF1CA482280050D53C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043ECDFE1CA482280050D53C /* AudioToolbox.framework */; };
 		044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044760401CA21D0E0052CE11 /* EditProfileViewController.swift */; };
+		04DDDD0F1CA317C5009DF81F /* FindMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */; };
+		04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */; };
+		04DDDD131CA35288009DF81F /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040490811CA19E9A00F61BA4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		040490831CA19EA200F61BA4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		040490851CA19EAD00F61BA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		040490871CA19EB600F61BA4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		040490891CA19EBE00F61BA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0404908B1CA19EC500F61BA4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0404908D1CA19ECD00F61BA4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0404908F1CA19EDA00F61BA4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		040490911CA19EE600F61BA4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		040490931CA19EF200F61BA4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -69,7 +69,11 @@
 		0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProfileViewController.swift; sourceTree = "<group>"; };
 		0408578C1CA1E65C0073B8EB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		040863751CA0AE5B001B82CB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		043ECDFE1CA482280050D53C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		044760401CA21D0E0052CE11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMoviesViewController.swift; sourceTree = "<group>"; };
+		04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		448149AB74E9D174D3921A60 /* Pods-MovieAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppIOS/Pods-MovieAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9BA5791E69F3D8B5CEF638CD /* Pods-MovieAppIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppIOS/Pods-MovieAppIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,18 +83,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043ECDFF1CA482280050D53C /* AudioToolbox.framework in Frameworks */,
 				040490981CA1AB3900F61BA4 /* Bolts.framework in Frameworks */,
 				040490941CA19EF200F61BA4 /* libsqlite3.tbd in Frameworks */,
 				0404909A1CA1AB8C00F61BA4 /* ParseUI.framework in Frameworks */,
 				040490921CA19EE600F61BA4 /* libz.tbd in Frameworks */,
 				040490901CA19EDA00F61BA4 /* SystemConfiguration.framework in Frameworks */,
-				0404908E1CA19ECD00F61BA4 /* StoreKit.framework in Frameworks */,
 				0404908C1CA19EC500F61BA4 /* Security.framework in Frameworks */,
 				0404908A1CA19EBE00F61BA4 /* QuartzCore.framework in Frameworks */,
 				040490881CA19EB600F61BA4 /* CoreLocation.framework in Frameworks */,
 				040490861CA19EAD00F61BA4 /* CoreGraphics.framework in Frameworks */,
 				040490841CA19EA200F61BA4 /* CFNetwork.framework in Frameworks */,
-				040490821CA19E9A00F61BA4 /* AudioToolbox.framework in Frameworks */,
 				040490961CA1AA4D00F61BA4 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,9 @@
 				0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */,
 				0408578C1CA1E65C0073B8EB /* TabBarController.swift */,
 				044760401CA21D0E0052CE11 /* EditProfileViewController.swift */,
+				04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */,
+				04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */,
+				04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */,
 			);
 			path = MovieAppIOS;
 			sourceTree = "<group>";
@@ -163,19 +169,18 @@
 		F9DE761BCAEC721940BE5878 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				043ECDFE1CA482280050D53C /* AudioToolbox.framework */,
 				040490931CA19EF200F61BA4 /* libsqlite3.tbd */,
 				040490911CA19EE600F61BA4 /* libz.tbd */,
 				040490991CA1AB8C00F61BA4 /* ParseUI.framework */,
 				040490971CA1AB3900F61BA4 /* Bolts.framework */,
 				040490951CA1AA4D00F61BA4 /* Parse.framework */,
 				0404908F1CA19EDA00F61BA4 /* SystemConfiguration.framework */,
-				0404908D1CA19ECD00F61BA4 /* StoreKit.framework */,
 				0404908B1CA19EC500F61BA4 /* Security.framework */,
 				040490891CA19EBE00F61BA4 /* QuartzCore.framework */,
 				040490871CA19EB600F61BA4 /* CoreLocation.framework */,
 				040490851CA19EAD00F61BA4 /* CoreGraphics.framework */,
 				040490831CA19EA200F61BA4 /* CFNetwork.framework */,
-				040490811CA19E9A00F61BA4 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			files = (
 				040772DF1C9F37F6000372EB /* LaunchScreen.storyboard in Resources */,
 				040772DC1C9F37F6000372EB /* Assets.xcassets in Resources */,
+				04DDDD131CA35288009DF81F /* MovieTableViewCell.xib in Resources */,
 				040772DA1C9F37F6000372EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,11 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DDDD0F1CA317C5009DF81F /* FindMoviesViewController.swift in Sources */,
 				040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */,
 				040772D71C9F37F6000372EB /* ViewController.swift in Sources */,
 				044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
 				0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */,
+				04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */,
 				0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,14 +477,19 @@
 			baseConfigurationReference = 448149AB74E9D174D3921A60 /* Pods-MovieAppIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MovieAppIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MovieAppIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2340.MovieAppIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -485,14 +498,19 @@
 			baseConfigurationReference = 9BA5791E69F3D8B5CEF638CD /* Pods-MovieAppIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MovieAppIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.MovieAppIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2340.MovieAppIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
+    override func viewWillAppear(animated: Bool) {
+        if (PFUser.currentUser() != nil) {
+            self.performSegueWithIdentifier("loginSegue", sender: "hello from login")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
 //                    self.presentViewController(viewController, animated: true, completion: nil)
 //                    
 //                })
+                print(user?.username)
                 self.performSegueWithIdentifier("loginSegue", sender: "hello from login")
             } else {
                 //error

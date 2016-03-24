@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            $0.server = "http://Salty_Popcorn:1337/parse"
 //        }
 //        Parse.initializeWithConfiguration(configuration)
+        Parse.enableLocalDatastore()
         Parse.setApplicationId("H7m3kYzm0ZbCWzvMFOVdtmD121p5f2g75MidLacY", clientKey: "N1kYDgql8IHxKCOME9K92d9FFKFzptgYPgWZNNqm")
         return true
     }
