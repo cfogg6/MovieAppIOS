@@ -280,6 +280,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-k1-prJ">
                                 <rect key="frame" x="20" y="105" width="560" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pOi-F4-40h" customClass="MovieTableViewCell" customModule="MovieAppIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pOi-F4-40h" id="WAc-Qk-woD">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P2j-Qa-nVW">
+                                        <rect key="frame" x="0.0" y="72" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P2j-Qa-nVW" id="9DP-ee-RaG">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wrW-fl-Dsn">
+                                        <rect key="frame" x="0.0" y="116" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wrW-fl-Dsn" id="miN-R8-F9p">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="KSg-QP-iku" id="bGo-Yd-TwW"/>
                                     <outlet property="delegate" destination="KSg-QP-iku" id="lbA-C2-rFs"/>
@@ -309,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="2778" y="-80"/>
         </scene>
-        <!--View Controller-->
+        <!--Recommendations View Controller-->
         <scene sceneID="ihD-P7-8Ga">
             <objects>
-                <viewController id="8w4-eM-iTs" sceneMemberID="viewController">
+                <viewController id="8w4-eM-iTs" customClass="RecommendationsViewController" customModule="MovieAppIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2e0-E1-w0M"/>
                         <viewControllerLayoutGuide type="bottom" id="YJ3-2x-HMN"/>
@@ -447,7 +474,7 @@
                             <constraint firstItem="9Am-LW-GzG" firstAttribute="top" secondItem="pbR-CZ-h9B" secondAttribute="bottom" constant="30" id="nDp-Td-YB9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Ony-TP-oRj"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Ony-TP-oRj"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="k8Z-Ub-Vqq" id="koy-zl-eNF"/>
@@ -486,6 +513,6 @@
         <image name="defaultPhoto" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IZW-7z-yeu"/>
+        <segue reference="Hql-Jl-ZsT"/>
     </inferredMetricsTieBreakers>
 </document>

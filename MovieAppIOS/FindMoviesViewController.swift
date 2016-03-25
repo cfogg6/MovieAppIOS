@@ -13,10 +13,9 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
 
     //MARK: Properties
     @IBOutlet weak var movieTable: UITableView!
-    var items: [String] = ["We", "Heart", "Swift"]
     private var moviesArray = NSArray()
     
-    override func viewDidLoad() {
+    override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
         self.movieTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
@@ -39,14 +38,18 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             // parse the result as JSON, since that's what the API provides
             do {
-                self.moviesArray = try NSJSONSerialization.JSONObjectWithData(responseData,
-                    options: []) as! NSArray
-            } catch  {
-                print("error trying to convert data to JSON")
-                return
+                if let jsonResult = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? NSDictionary {
+                    print(jsonResult)
+                    self.moviesArray = (jsonResult["movies"] as? NSArray)!
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.movieTable.reloadData()
+                    })
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
             }
         })
-        movieTable.registerNib(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
+        movieTable.registerNib(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
         task.resume()
     }
     
@@ -58,13 +61,13 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        return self.moviesArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:MovieTableViewCell = movieTable.dequeueReusableCellWithIdentifier("customCell") as! MovieTableViewCell
+        let cell:MovieTableViewCell = movieTable.dequeueReusableCellWithIdentifier("movieCell") as! MovieTableViewCell
         // this is how you extract values from a tuple
-        let variableTitle = moviesArray.objectAtIndex(indexPath.row)["title"] as! String
+        let variableTitle = moviesArray[indexPath.row]["title"] as! String
         cell.movieTitleSet(variableTitle)
         return cell
     }

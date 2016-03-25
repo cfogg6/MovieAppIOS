@@ -28,6 +28,7 @@
 		0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578C1CA1E65C0073B8EB /* TabBarController.swift */; };
 		040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040863751CA0AE5B001B82CB /* RegistrationViewController.swift */; };
 		043ECDFF1CA482280050D53C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043ECDFE1CA482280050D53C /* AudioToolbox.framework */; };
+		043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */; };
 		044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044760401CA21D0E0052CE11 /* EditProfileViewController.swift */; };
 		04DDDD0F1CA317C5009DF81F /* FindMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */; };
 		04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */; };
@@ -70,6 +71,7 @@
 		0408578C1CA1E65C0073B8EB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		040863751CA0AE5B001B82CB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		043ECDFE1CA482280050D53C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		044760401CA21D0E0052CE11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMoviesViewController.swift; sourceTree = "<group>"; };
 		04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */,
 				04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */,
 				04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */,
+				043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */,
 			);
 			path = MovieAppIOS;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
 				0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */,
+				043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */,
 				04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */,
 				0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */,
 			);
