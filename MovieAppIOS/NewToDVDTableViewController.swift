@@ -74,7 +74,16 @@ class NewToDVDTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("NewToDVDMovieDetails", sender: moviesArray[indexPath.row])
         print("You selected cell #\(indexPath.row)!")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "NewToDVDMovieDetails" {
+            if let movieDetailViewController = segue.destinationViewController as? MovieDetailViewController {
+                movieDetailViewController.movie = sender as! NSDictionary
+            }
+        }
     }
 
     /*

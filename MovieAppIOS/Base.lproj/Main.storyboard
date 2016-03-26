@@ -389,6 +389,7 @@
                     </tableView>
                     <connections>
                         <outlet property="movieTable" destination="aXn-94-5Ox" id="PwI-7i-kbt"/>
+                        <segue destination="SzB-7M-63m" kind="show" identifier="MovieSearchMovieDetails" id="I51-Ok-MPb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihP-vh-vnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -421,11 +422,93 @@
                     </tableView>
                     <connections>
                         <outlet property="movieTable" destination="2fx-m3-hVo" id="bvL-XX-cFb"/>
+                        <segue destination="SzB-7M-63m" kind="show" identifier="NewToDVDMovieDetails" id="MOG-TD-ROA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3k-Ox-D4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4833" y="-111"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="hMu-Gt-PY7">
+            <objects>
+                <viewController id="SzB-7M-63m" userLabel="Movie Detail View Controller" customClass="MovieDetailViewController" customModule="MovieAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qbj-7o-cnR"/>
+                        <viewControllerLayoutGuide type="bottom" id="pnu-Rd-cxu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q4b-nV-qDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-Kn-lXx">
+                                <rect key="frame" x="20" y="64" width="560" height="437"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pl-Gi-WLC">
+                                        <rect key="frame" x="239" y="0.0" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPV-oy-6QA" customClass="CosmosView" customModule="MovieAppIOS" customModuleProvider="target">
+                                        <rect key="frame" x="145" y="64" width="270" height="164"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2W-2X-9sp">
+                                        <rect key="frame" x="0.0" y="271" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-Ll-4XK">
+                                        <rect key="frame" x="0.0" y="334" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INg-Zh-1kk">
+                                        <rect key="frame" x="0.0" y="407" width="560" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="o2W-2X-9sp" firstAttribute="leading" secondItem="vWQ-Kn-lXx" secondAttribute="leading" id="3oW-sg-06S"/>
+                                    <constraint firstItem="V8B-Ll-4XK" firstAttribute="leading" secondItem="vWQ-Kn-lXx" secondAttribute="leading" id="GA6-if-oQk"/>
+                                    <constraint firstItem="INg-Zh-1kk" firstAttribute="leading" secondItem="vWQ-Kn-lXx" secondAttribute="leading" id="mq2-zK-vnx"/>
+                                    <constraint firstAttribute="trailing" secondItem="INg-Zh-1kk" secondAttribute="trailing" id="ojT-l8-JEd"/>
+                                    <constraint firstAttribute="trailing" secondItem="V8B-Ll-4XK" secondAttribute="trailing" id="wd9-au-HcP"/>
+                                    <constraint firstAttribute="trailing" secondItem="o2W-2X-9sp" secondAttribute="trailing" id="wra-UP-2BP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pnu-Rd-cxu" firstAttribute="top" secondItem="vWQ-Kn-lXx" secondAttribute="bottom" constant="50" id="6dS-JY-Uie"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vWQ-Kn-lXx" secondAttribute="trailing" id="Aox-Fx-k7X"/>
+                            <constraint firstItem="vWQ-Kn-lXx" firstAttribute="top" secondItem="Qbj-7o-cnR" secondAttribute="bottom" id="amI-vh-pde"/>
+                            <constraint firstItem="vWQ-Kn-lXx" firstAttribute="leading" secondItem="q4b-nV-qDZ" secondAttribute="leadingMargin" id="bKK-E7-UUB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="V8B-Ll-4XK" id="u1L-Mc-4oq"/>
+                        <outlet property="starBar" destination="WPV-oy-6QA" id="VX1-xs-iEk"/>
+                        <outlet property="submitButton" destination="INg-Zh-1kk" id="eOc-jS-UbA"/>
+                        <outlet property="titleLabel" destination="2Pl-Gi-WLC" id="zjO-bk-EgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fko-KP-8Ei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5789" y="14"/>
         </scene>
         <!--In Theaters Table View Controller-->
         <scene sceneID="xyK-Be-wAZ">
@@ -452,6 +535,7 @@
                     </tableView>
                     <connections>
                         <outlet property="movieTable" destination="C0d-93-7ZP" id="TlB-sc-ou2"/>
+                        <segue destination="SzB-7M-63m" kind="show" identifier="inTheaterMovieDetails" id="g8g-hf-H5B"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5i-UH-skI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -471,6 +555,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="SzB-7M-63m" kind="show" identifier="RecommendationsMovieDetails" id="X8u-mo-KTJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4m-xw-5Sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -652,5 +739,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hql-Jl-ZsT"/>
+        <segue reference="MOG-TD-ROA"/>
     </inferredMetricsTieBreakers>
 </document>

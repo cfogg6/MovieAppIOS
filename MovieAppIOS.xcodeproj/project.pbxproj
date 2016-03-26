@@ -33,6 +33,8 @@
 		043ECE051CA58E180050D53C /* NewToDVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */; };
 		043ECE071CA5903C0050D53C /* MovieSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */; };
 		044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044760401CA21D0E0052CE11 /* EditProfileViewController.swift */; };
+		04BD989F1CA7216B00E69BEC /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD989E1CA7216B00E69BEC /* CosmosDistrib.swift */; };
+		04BD98A11CA7291D00E69BEC /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD98A01CA7291D00E69BEC /* MovieDetailViewController.swift */; };
 		04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */; };
 		04DDDD131CA35288009DF81F /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewToDVDTableViewController.swift; sourceTree = "<group>"; };
 		043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewController.swift; sourceTree = "<group>"; };
 		044760401CA21D0E0052CE11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		04BD989E1CA7216B00E69BEC /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		04BD98A01CA7291D00E69BEC /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		448149AB74E9D174D3921A60 /* Pods-MovieAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppIOS/Pods-MovieAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				043ECE021CA58A3B0050D53C /* InTheatersTableViewController.swift */,
 				043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */,
 				043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */,
+				04BD989E1CA7216B00E69BEC /* CosmosDistrib.swift */,
+				04BD98A01CA7291D00E69BEC /* MovieDetailViewController.swift */,
 			);
 			path = MovieAppIOS;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 				040772D71C9F37F6000372EB /* ViewController.swift in Sources */,
 				043ECE071CA5903C0050D53C /* MovieSearchTableViewController.swift in Sources */,
 				043ECE051CA58E180050D53C /* NewToDVDTableViewController.swift in Sources */,
+				04BD98A11CA7291D00E69BEC /* MovieDetailViewController.swift in Sources */,
 				044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */,
 				043ECE031CA58A3B0050D53C /* InTheatersTableViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
@@ -360,6 +367,7 @@
 				043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */,
 				04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */,
 				0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */,
+				04BD989F1CA7216B00E69BEC /* CosmosDistrib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
