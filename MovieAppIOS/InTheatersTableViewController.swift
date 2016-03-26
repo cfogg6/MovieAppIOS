@@ -1,15 +1,14 @@
 //
-//  FindMoviesViewController.swift
+//  InTheatersTableViewController.swift
 //  MovieAppIOS
 //
-//  Created by Corey Fogg on 3/23/16.
+//  Created by Corey Fogg on 3/25/16.
 //  Copyright © 2016 Corey Fogg. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InTheatersTableViewController: UITableViewController {
 
     //MARK: Properties
     @IBOutlet weak var movieTable: UITableView!
@@ -17,8 +16,9 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
-        self.movieTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
+        self.movieTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "movieCell")
+        navigationItem.title = "In Theaters"
+
         let postEndpoint: String = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=yedukp76ffytfuy24zsqk7f5"
         guard let url = NSURL(string: postEndpoint) else {
             return
@@ -54,17 +54,17 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.moviesArray.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:MovieTableViewCell = movieTable.dequeueReusableCellWithIdentifier("movieCell") as! MovieTableViewCell
         // this is how you extract values from a tuple
         let variableTitle = moviesArray[indexPath.row]["title"] as! String
@@ -72,11 +72,56 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         print("You selected cell #\(indexPath.row)!")
     }
-    
+
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
+        return cell
+    }
+    */
+
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
+
     /*
     // MARK: - Navigation
 
@@ -86,9 +131,5 @@ class FindMoviesViewController: UIViewController, UITableViewDelegate, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
-    struct Movie {
-        let title: String
-        let description: String
-        let rating: Int
-    }
+
 }

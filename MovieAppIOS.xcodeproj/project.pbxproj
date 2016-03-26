@@ -29,8 +29,10 @@
 		040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040863751CA0AE5B001B82CB /* RegistrationViewController.swift */; };
 		043ECDFF1CA482280050D53C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043ECDFE1CA482280050D53C /* AudioToolbox.framework */; };
 		043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */; };
+		043ECE031CA58A3B0050D53C /* InTheatersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE021CA58A3B0050D53C /* InTheatersTableViewController.swift */; };
+		043ECE051CA58E180050D53C /* NewToDVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */; };
+		043ECE071CA5903C0050D53C /* MovieSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */; };
 		044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044760401CA21D0E0052CE11 /* EditProfileViewController.swift */; };
-		04DDDD0F1CA317C5009DF81F /* FindMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */; };
 		04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */; };
 		04DDDD131CA35288009DF81F /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -72,8 +74,10 @@
 		040863751CA0AE5B001B82CB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		043ECDFE1CA482280050D53C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
+		043ECE021CA58A3B0050D53C /* InTheatersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatersTableViewController.swift; sourceTree = "<group>"; };
+		043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewToDVDTableViewController.swift; sourceTree = "<group>"; };
+		043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewController.swift; sourceTree = "<group>"; };
 		044760401CA21D0E0052CE11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMoviesViewController.swift; sourceTree = "<group>"; };
 		04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		448149AB74E9D174D3921A60 /* Pods-MovieAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieAppIOS/Pods-MovieAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,10 +147,12 @@
 				0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */,
 				0408578C1CA1E65C0073B8EB /* TabBarController.swift */,
 				044760401CA21D0E0052CE11 /* EditProfileViewController.swift */,
-				04DDDD0E1CA317C5009DF81F /* FindMoviesViewController.swift */,
 				04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */,
 				04DDDD121CA35288009DF81F /* MovieTableViewCell.xib */,
 				043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */,
+				043ECE021CA58A3B0050D53C /* InTheatersTableViewController.swift */,
+				043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */,
+				043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */,
 			);
 			path = MovieAppIOS;
 			sourceTree = "<group>";
@@ -343,10 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04DDDD0F1CA317C5009DF81F /* FindMoviesViewController.swift in Sources */,
 				040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */,
 				040772D71C9F37F6000372EB /* ViewController.swift in Sources */,
+				043ECE071CA5903C0050D53C /* MovieSearchTableViewController.swift in Sources */,
+				043ECE051CA58E180050D53C /* NewToDVDTableViewController.swift in Sources */,
 				044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */,
+				043ECE031CA58A3B0050D53C /* InTheatersTableViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
 				0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */,
 				043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */,

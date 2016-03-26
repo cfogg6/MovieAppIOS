@@ -15,6 +15,10 @@ class RecommendationsViewController: ViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "Recommendations"
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
