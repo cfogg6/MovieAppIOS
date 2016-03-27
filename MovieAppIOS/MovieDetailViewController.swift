@@ -17,6 +17,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
     var movie: NSDictionary!
+    var pfMovie: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,22 +31,30 @@ class MovieDetailViewController: UIViewController {
         self.titleLabel.text = movie["title"] as? String
         let query = PFQuery(className: "Ratings")
         query.whereKey("username", equalTo: PFUser.currentUser()!.username!)
-        print(movie["title"])
         query.whereKey("title", equalTo: movie["title"]!)
         query.findObjectsInBackgroundWithBlock({
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
-                // Do something with the found objects
-                if let objects = objects {
-                    for object in objects {
-                        dispatch_async(dispatch_get_main_queue(), {
-                            //get rating from object
-                            self.starBar.rating = object["rating"] as! Double
-                            self.commentTextField.text = object["comment"] as? String
-                        })
+                if (objects?.count > 0) {
+                    // Do something with the found objects
+                    if let objects = objects {
+                        for object in objects {
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self.pfMovie = object
+                                //get rating from object
+                                self.starBar.rating = object["rating"] as! Double
+                                self.commentTextField.text = object["comment"] as? String
+                            })
+                        }
                     }
+                } else {
+                    self.pfMovie = PFObject(className: "Ratings")
+                    self.pfMovie["username"] = PFUser.currentUser()?.username
+                    self.pfMovie["title"] = self.movie["title"]
+                    self.pfMovie["rating"] = 0
+                    self.pfMovie["comment"] = ""
+                    self.pfMovie["major"] = PFUser.currentUser()!["major"]
                 }
             } else {
                 // Log details of the failure
@@ -54,6 +63,14 @@ class MovieDetailViewController: UIViewController {
         })
     }
 
+    @IBAction func submitButtonClicked(sender: AnyObject) {
+        if (starBar.rating > 0 && pfMovie != nil) {
+            pfMovie["rating"] = starBar.rating
+            pfMovie["comment"] = commentTextField.text
+            pfMovie.saveInBackground()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

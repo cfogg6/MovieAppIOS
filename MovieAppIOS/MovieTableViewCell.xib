@@ -28,7 +28,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="movieTitle" destination="7tj-iq-8iG" id="BSc-Kw-9JX"/>
+                <outlet property="movieTitle" destination="7tj-iq-8iG" id="JVK-2B-pue"/>
             </connections>
             <point key="canvasLocation" x="411" y="313"/>
         </tableViewCell>

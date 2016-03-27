@@ -39,7 +39,6 @@ class InTheatersTableViewController: UITableViewController {
             // parse the result as JSON, since that's what the API provides
             do {
                 if let jsonResult = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? NSDictionary {
-                    print(jsonResult)
                     self.moviesArray = (jsonResult["movies"] as? NSArray)!
                     dispatch_async(dispatch_get_main_queue(), {
                         self.movieTable.reloadData()
@@ -52,8 +51,6 @@ class InTheatersTableViewController: UITableViewController {
         movieTable.registerNib(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
         task.resume()
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

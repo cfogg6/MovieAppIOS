@@ -479,6 +479,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INg-Zh-1kk">
                                         <rect key="frame" x="0.0" y="407" width="560" height="30"/>
                                         <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitButtonClicked:" destination="SzB-7M-63m" eventType="touchUpInside" id="SjL-mN-xon"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -535,7 +538,7 @@
                     </tableView>
                     <connections>
                         <outlet property="movieTable" destination="C0d-93-7ZP" id="TlB-sc-ou2"/>
-                        <segue destination="SzB-7M-63m" kind="show" identifier="inTheaterMovieDetails" id="g8g-hf-H5B"/>
+                        <segue destination="SzB-7M-63m" kind="show" identifier="InTheatersMovieDetails" id="g8g-hf-H5B"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5i-UH-skI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -545,7 +548,7 @@
         <!--Recommendations View Controller-->
         <scene sceneID="Y8G-Zv-WaR">
             <objects>
-                <viewController id="hPY-hC-GVe" userLabel="Recommendations View Controller" sceneMemberID="viewController">
+                <viewController id="hPY-hC-GVe" userLabel="Recommendations View Controller" customClass="RecommendationsViewController" customModule="MovieAppIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PtZ-dd-LwT"/>
                         <viewControllerLayoutGuide type="bottom" id="K9v-ON-0oP"/>
@@ -553,9 +556,47 @@
                     <view key="view" contentMode="scaleToFill" id="vT6-Pk-0CA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-MM-QfC">
+                                <rect key="frame" x="20" y="72" width="560" height="55"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hPY-hC-GVe" id="4Yc-5o-c16"/>
+                                </connections>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xpd-7H-p8Z">
+                                <rect key="frame" x="20" y="135" width="560" height="408"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" id="fVH-Z8-UWI" customClass="MovieTableViewCell" customModule="MovieAppIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVH-Z8-UWI" id="XuY-Dz-YrQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hPY-hC-GVe" id="3aA-EH-exc"/>
+                                    <outlet property="delegate" destination="hPY-hC-GVe" id="lOr-9E-tiX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K9v-ON-0oP" firstAttribute="top" secondItem="Xpd-7H-p8Z" secondAttribute="bottom" constant="8" id="5cD-wZ-4l6"/>
+                            <constraint firstItem="Cap-MM-QfC" firstAttribute="top" secondItem="PtZ-dd-LwT" secondAttribute="bottom" constant="8" id="AB8-gH-ll6"/>
+                            <constraint firstItem="Xpd-7H-p8Z" firstAttribute="top" secondItem="Cap-MM-QfC" secondAttribute="bottom" constant="8" id="G1k-b5-4fe"/>
+                            <constraint firstItem="Xpd-7H-p8Z" firstAttribute="top" secondItem="PtZ-dd-LwT" secondAttribute="bottom" constant="71" id="Jkf-cm-GXv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Xpd-7H-p8Z" secondAttribute="leading" id="jLS-Dd-OiS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Cap-MM-QfC" secondAttribute="leading" id="oPY-Tm-2cE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xpd-7H-p8Z" secondAttribute="trailing" id="qxV-zF-s9c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cap-MM-QfC" secondAttribute="trailing" id="uJP-rD-tNT"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="majorPicker" destination="Cap-MM-QfC" id="JqK-Up-hgj"/>
+                        <outlet property="movieTable" destination="Xpd-7H-p8Z" id="ezh-76-3U1"/>
                         <segue destination="SzB-7M-63m" kind="show" identifier="RecommendationsMovieDetails" id="X8u-mo-KTJ"/>
                     </connections>
                 </viewController>
@@ -739,6 +780,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hql-Jl-ZsT"/>
-        <segue reference="MOG-TD-ROA"/>
+        <segue reference="g8g-hf-H5B"/>
     </inferredMetricsTieBreakers>
 </document>

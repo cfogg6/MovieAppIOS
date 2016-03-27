@@ -61,7 +61,6 @@ class MovieSearchTableViewController: UITableViewController, UISearchBarDelegate
     
     func search(searchTerm: String) {
         if (searchTerm != "") {
-            print("search")
             let startURL: String = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=yedukp76ffytfuy24zsqk7f5"
             let postEndpoint = startURL + "&q=" + searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "+", options:    NSStringCompareOptions.LiteralSearch, range: nil) + "&page_limit=20"
             guard let url = NSURL(string: postEndpoint) else {
