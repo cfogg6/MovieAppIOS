@@ -15,12 +15,17 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
     @IBOutlet weak var majorPicker: UIPickerView!
     private var moviesArray = [PFObject]()
     @IBOutlet weak var movieTable: UITableView!
-    private var majorsArray = ["Computer Science", "Computer Media"]
+    private var majorsArray = ["Select a Major", "Computer Science", "Computer Media", "Computer Science",
+                               "Computational Media", "Aerospace Engineering", "Biology", "Biomedical Engineering",
+                               "Business", "Chemical Engineering", "Chemistry", "Civil Engineering",
+                               "Computer Engineering", "Electrical Engineering", "Environmental Engineering",
+                               "Industrial Engineering", "International Affairs", "Math",
+                               "Mechanical Engineering", "Physics", "Public Policy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
-        
+        majorPicker.selectRow(0, inComponent: 0, animated: true)
         movieTable.registerNib(nib, forCellReuseIdentifier: "movieCell")
         // Do any additional setup after loading the view.
     }
@@ -65,11 +70,6 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
                 print(pfSender["rating"])
                 print(pfSender["comment"])
                 let nsSender = NSDictionary(objects: [(PFUser.currentUser()!.username)!, pfSender["title"], pfSender["rating"], pfSender["comment"], (PFUser.currentUser()!["major"])!], forKeys: ["username", "title", "rating", "comment", "major"])
-//                nsSender.setValue(PFUser.currentUser()?.username, forKeyPath: "username")
-//                nsSender.setValue(pfSender["title"], forUndefinedKey: "title")
-//                nsSender.setValue(pfSender["rating"], forUndefinedKey: "rating")
-//                nsSender.setValue(pfSender["comment"], forUndefinedKey: "comment")
-//                nsSender.setValue(PFUser.currentUser()?["major"], forUndefinedKey: "major")
                 movieDetailViewController.movie = nsSender
             }
         }
@@ -83,19 +83,19 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return majorsArray.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 1
     }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return majorsArray.count
+    }
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return majorsArray[component]
+        return majorsArray[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int,inComponent component: Int) {
-        search(majorsArray[component])
+        search(majorsArray[row])
     }
     
     func search(major: String) {
@@ -105,16 +105,19 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
                 if (objects?.count > 0) {
                     // Do something with the found objects
                     if let objects = objects {
                         self.moviesArray = objects
                         dispatch_async(dispatch_get_main_queue(), {
-                            print("Reload")
                             self.movieTable.reloadData()
                         })
                     }
+                } else {
+                    self.moviesArray = [PFObject]()
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.movieTable.reloadData()
+                    })
                 }
             } else {
                 // Log details of the failure

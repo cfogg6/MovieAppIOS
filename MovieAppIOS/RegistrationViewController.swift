@@ -66,7 +66,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func cancelClicked(sender: AnyObject) {
-        performSegueWithIdentifier("cancelClickedSegue", sender: "hello from registration")
+        dismissViewControllerAnimated(true, completion:nil)
     }
     
 

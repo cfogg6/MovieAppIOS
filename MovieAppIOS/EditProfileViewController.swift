@@ -46,9 +46,6 @@ class EditProfileViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        // Initialize Tab Bar Item
-        tabBarItem = UITabBarItem(title: "Edit Profile", image: tabBarItem.selectedImage, tag: 0)
     }
     
     //MARK: Actions
@@ -58,9 +55,9 @@ class EditProfileViewController: UIViewController {
             user["major"] = majortextField.text
             user["interests"] = interestTextField.text
             user.email = emailTextField.text
-        
             //3
             user.saveInBackground()
+            navigationController?.popViewControllerAnimated(true)
         }
     }
     

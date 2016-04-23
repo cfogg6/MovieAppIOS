@@ -17,6 +17,7 @@ class ShowProfileViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var interestLabel: UILabel!
+    @IBOutlet weak var logoutBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class ShowProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        
+        dismissViewControllerAnimated(true, completion:nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -27,12 +27,16 @@
 		0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */; };
 		0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408578C1CA1E65C0073B8EB /* TabBarController.swift */; };
 		040863761CA0AE5B001B82CB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040863751CA0AE5B001B82CB /* RegistrationViewController.swift */; };
+		0424ED141CC7EFB200D27505 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424ED131CC7EFB200D27505 /* UserTableViewCell.swift */; };
+		0424ED161CC7F92200D27505 /* AdminUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424ED151CC7F92200D27505 /* AdminUser.swift */; };
 		043ECDFF1CA482280050D53C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043ECDFE1CA482280050D53C /* AudioToolbox.framework */; };
 		043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */; };
 		043ECE031CA58A3B0050D53C /* InTheatersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE021CA58A3B0050D53C /* InTheatersTableViewController.swift */; };
 		043ECE051CA58E180050D53C /* NewToDVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */; };
 		043ECE071CA5903C0050D53C /* MovieSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */; };
 		044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044760401CA21D0E0052CE11 /* EditProfileViewController.swift */; };
+		0476043F1CC6981C00497BA4 /* FindMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476043E1CC6981C00497BA4 /* FindMovieTableViewController.swift */; };
+		047604411CC7472C00497BA4 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047604401CC7472C00497BA4 /* AdminTableViewController.swift */; };
 		04BD989F1CA7216B00E69BEC /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD989E1CA7216B00E69BEC /* CosmosDistrib.swift */; };
 		04BD98A11CA7291D00E69BEC /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD98A01CA7291D00E69BEC /* MovieDetailViewController.swift */; };
 		04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */; };
@@ -74,12 +78,16 @@
 		0408578A1CA1C6290073B8EB /* ShowProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProfileViewController.swift; sourceTree = "<group>"; };
 		0408578C1CA1E65C0073B8EB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		040863751CA0AE5B001B82CB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		0424ED131CC7EFB200D27505 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		0424ED151CC7F92200D27505 /* AdminUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminUser.swift; sourceTree = "<group>"; };
 		043ECDFE1CA482280050D53C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		043ECE001CA4F8AA0050D53C /* RecommendationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		043ECE021CA58A3B0050D53C /* InTheatersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatersTableViewController.swift; sourceTree = "<group>"; };
 		043ECE041CA58E180050D53C /* NewToDVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewToDVDTableViewController.swift; sourceTree = "<group>"; };
 		043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewController.swift; sourceTree = "<group>"; };
 		044760401CA21D0E0052CE11 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		0476043E1CC6981C00497BA4 /* FindMovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMovieTableViewController.swift; sourceTree = "<group>"; };
+		047604401CC7472C00497BA4 /* AdminTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminTableViewController.swift; sourceTree = "<group>"; };
 		04BD989E1CA7216B00E69BEC /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		04BD98A01CA7291D00E69BEC /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		04DDDD101CA348B5009DF81F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -159,9 +167,14 @@
 				043ECE061CA5903C0050D53C /* MovieSearchTableViewController.swift */,
 				04BD989E1CA7216B00E69BEC /* CosmosDistrib.swift */,
 				04BD98A01CA7291D00E69BEC /* MovieDetailViewController.swift */,
+				0476043E1CC6981C00497BA4 /* FindMovieTableViewController.swift */,
+				047604401CC7472C00497BA4 /* AdminTableViewController.swift */,
+				0424ED131CC7EFB200D27505 /* UserTableViewCell.swift */,
+				0424ED151CC7F92200D27505 /* AdminUser.swift */,
 			);
-			path = MovieAppIOS;
-			sourceTree = "<group>";
+			name = MovieAppIOS;
+			path = /Users/Corey/Documents/2340/MovieAppIOS/MovieAppIOS;
+			sourceTree = "<absolute>";
 		};
 		040772E81C9F37F6000372EB /* MovieAppIOSTests */ = {
 			isa = PBXGroup;
@@ -359,15 +372,19 @@
 				040772D71C9F37F6000372EB /* ViewController.swift in Sources */,
 				043ECE071CA5903C0050D53C /* MovieSearchTableViewController.swift in Sources */,
 				043ECE051CA58E180050D53C /* NewToDVDTableViewController.swift in Sources */,
+				0424ED141CC7EFB200D27505 /* UserTableViewCell.swift in Sources */,
 				04BD98A11CA7291D00E69BEC /* MovieDetailViewController.swift in Sources */,
 				044760411CA21D0E0052CE11 /* EditProfileViewController.swift in Sources */,
 				043ECE031CA58A3B0050D53C /* InTheatersTableViewController.swift in Sources */,
 				040772D51C9F37F6000372EB /* AppDelegate.swift in Sources */,
 				0408578D1CA1E65C0073B8EB /* TabBarController.swift in Sources */,
 				043ECE011CA4F8AA0050D53C /* RecommendationsViewController.swift in Sources */,
+				047604411CC7472C00497BA4 /* AdminTableViewController.swift in Sources */,
 				04DDDD111CA348B5009DF81F /* MovieTableViewCell.swift in Sources */,
 				0408578B1CA1C6290073B8EB /* ShowProfileViewController.swift in Sources */,
 				04BD989F1CA7216B00E69BEC /* CosmosDistrib.swift in Sources */,
+				0424ED161CC7F92200D27505 /* AdminUser.swift in Sources */,
+				0476043F1CC6981C00497BA4 /* FindMovieTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
