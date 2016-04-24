@@ -39,15 +39,15 @@ class ShowProfileViewController: UIViewController {
         let user = PFUser.currentUser()
         if let displayIntake = PFUser.currentUser()!["name"] as? String {
             nameTitle.text = displayIntake
-            nameLabel.text = displayIntake
+            nameLabel.text = "Name: " + displayIntake
         }
         if let displayIntake = PFUser.currentUser()!["major"] as? String {
-            majorLabel.text = displayIntake
+            majorLabel.text = "Major: " + displayIntake
         }
         if let displayIntake = PFUser.currentUser()!["interests"] as? String {
-            interestLabel.text = displayIntake
+            interestLabel.text = "Interests: " + displayIntake
         }
-        emailLabel.text = user?.email
+        emailLabel.text = "Email: " + (user?.email)!
     }
     
     required init?(coder aDecoder: NSCoder) {

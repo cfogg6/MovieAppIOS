@@ -16,6 +16,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var movieImage: UIImageView!
     var movie: NSDictionary!
     var pfMovie: PFObject!
     
@@ -25,6 +26,12 @@ class MovieDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        print((movie["posters"] as! NSDictionary))
+
+        if let checkedUrl = NSURL(string: (movie["posters"] as! NSDictionary)["profile"] as! String) {
+            movieImage.contentMode = .ScaleAspectFit
+            downloadImage(checkedUrl)
+        }
         super.viewWillAppear(animated)
         starBar.settings.fillMode = .Half
         print(movie["title"])
@@ -76,6 +83,26 @@ class MovieDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func downloadImage(url: NSURL){
+        print("Download Started")
+        print("lastPathComponent: " + (url.lastPathComponent ?? ""))
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                print(response?.suggestedFilename ?? "")
+                print("Download Finished")
+                let image = UIImage(data: data)
+                self.movieImage.bounds = CGRectMake(0, 0, image!.size.width * 5, image!.size.height * 5);
+                self.movieImage.image = image
+            }
+        }
+    }
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
     
     /*
     // MARK: - Navigation
