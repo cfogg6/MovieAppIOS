@@ -899,11 +899,7 @@
         <scene sceneID="Odn-lx-EbO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muT-vJ-UMx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="bucketTab" id="QrB-T4-pFd">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value="B81D63DA-2C3C-4530-8D3E-6B157A8DD397"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Profile" image="bucketTab" id="QrB-T4-pFd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bwz-U0-B0g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
