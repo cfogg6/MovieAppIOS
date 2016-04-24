@@ -92,8 +92,9 @@ class MovieDetailViewController: UIViewController {
                 print(response?.suggestedFilename ?? "")
                 print("Download Finished")
                 let image = UIImage(data: data)
-                self.movieImage.bounds = CGRectMake(0, 0, image!.size.width * 5, image!.size.height * 5);
                 self.movieImage.image = image
+                let size = CGSizeMake(100, 150)
+                self.movieImage.image! = self.imageResize(self.movieImage.image!,sizeChange: size)
             }
         }
     }
@@ -102,6 +103,18 @@ class MovieDetailViewController: UIViewController {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
             completion(data: data, response: response, error: error)
             }.resume()
+    }
+    
+    func imageResize (image:UIImage, sizeChange:CGSize)-> UIImage{
+        
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(sizeChange, !hasAlpha, scale)
+        image.drawInRect(CGRect(origin: CGPointZero, size: sizeChange))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage
     }
     
     /*

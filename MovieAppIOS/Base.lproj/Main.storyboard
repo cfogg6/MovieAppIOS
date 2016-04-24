@@ -204,19 +204,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-iF-hCx">
-                                <rect key="frame" x="20" y="80" width="560" height="467"/>
+                                <rect key="frame" x="20" y="80" width="560" height="411"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Dj-ec-tTm">
-                                        <rect key="frame" x="152" y="0.0" width="256" height="256"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Dj-ec-tTm">
+                                        <rect key="frame" x="180" y="0.0" width="200" height="200"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Salty Popcorn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOD-CF-6nA">
-                                        <rect key="frame" x="0.0" y="268" width="560" height="40"/>
+                                        <rect key="frame" x="0.0" y="212" width="560" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-OM-VlF">
-                                        <rect key="frame" x="0.0" y="320" width="560" height="147"/>
+                                        <rect key="frame" x="0.0" y="264" width="560" height="147"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-uH-Q3b">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -274,7 +274,7 @@
             </objects>
             <point key="canvasLocation" x="1250" y="372"/>
         </scene>
-        <!--Show Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="u4a-kb-JGc">
             <objects>
                 <viewController id="Lzf-tq-NHh" customClass="ShowProfileViewController" customModule="MovieAppIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -353,7 +353,7 @@
                             <constraint firstItem="eoT-oZ-EwJ" firstAttribute="top" secondItem="NKP-qX-woX" secondAttribute="bottom" id="yn5-C8-XBq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bm9-Wh-CUh"/>
+                    <navigationItem key="navigationItem" title="Profile" id="bm9-Wh-CUh"/>
                     <connections>
                         <outlet property="emailLabel" destination="PXX-xK-2A9" id="aWe-p0-ZBi"/>
                         <outlet property="interestLabel" destination="2Sr-Wc-eSA" id="vVx-jf-xti"/>
@@ -370,7 +370,7 @@
         <!--Find Movie Table View Controller-->
         <scene sceneID="E0c-ah-ORA">
             <objects>
-                <tableViewController id="25x-GS-Mq4" userLabel="Find Movie Table View Controller" sceneMemberID="viewController">
+                <tableViewController title="Find Movies" id="25x-GS-Mq4" userLabel="Find Movie Table View Controller" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oii-ER-TSY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,7 +443,7 @@
                             <outlet property="delegate" destination="25x-GS-Mq4" id="15A-mW-rbx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iuu-bx-4c6"/>
+                    <navigationItem key="navigationItem" title="Find Movies" id="iuu-bx-4c6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5R-xT-QIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,19 +536,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-Kn-lXx">
-                                <rect key="frame" x="20" y="64" width="560" height="516"/>
+                                <rect key="frame" x="20" y="74" width="560" height="476"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-9d-gpl">
-                                        <rect key="frame" x="19" y="0.0" width="523" height="150"/>
+                                        <rect key="frame" x="255" y="0.0" width="50" height="50"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pl-Gi-WLC">
-                                        <rect key="frame" x="239" y="193" width="84" height="21"/>
+                                        <rect key="frame" x="239" y="93" width="84" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPV-oy-6QA" customClass="CosmosView" customModule="MovieAppIOS" customModuleProvider="target">
-                                        <rect key="frame" x="145" y="257" width="270" height="50"/>
+                                        <rect key="frame" x="145" y="157" width="270" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -563,18 +563,21 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2W-2X-9sp">
-                                        <rect key="frame" x="0.0" y="350" width="560" height="21"/>
+                                        <rect key="frame" x="0.0" y="250" width="560" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-Ll-4XK">
-                                        <rect key="frame" x="0.0" y="413" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="313" width="560" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="EnR-RE-7tw"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INg-Zh-1kk">
-                                        <rect key="frame" x="0.0" y="486" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="446" width="560" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <action selector="submitButtonClicked:" destination="SzB-7M-63m" eventType="touchUpInside" id="SjL-mN-xon"/>
@@ -594,12 +597,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="vWQ-Kn-lXx" secondAttribute="trailing" id="Aox-Fx-k7X"/>
-                            <constraint firstItem="vWQ-Kn-lXx" firstAttribute="top" secondItem="Qbj-7o-cnR" secondAttribute="bottom" id="amI-vh-pde"/>
+                            <constraint firstItem="vWQ-Kn-lXx" firstAttribute="top" secondItem="Qbj-7o-cnR" secondAttribute="bottom" constant="10" id="amI-vh-pde"/>
                             <constraint firstItem="vWQ-Kn-lXx" firstAttribute="leading" secondItem="q4b-nV-qDZ" secondAttribute="leadingMargin" id="bKK-E7-UUB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="commentTextField" destination="V8B-Ll-4XK" id="u1L-Mc-4oq"/>
+                        <outlet property="commentTextField" destination="V8B-Ll-4XK" id="dTw-b0-m37"/>
                         <outlet property="movieImage" destination="Bhk-9d-gpl" id="xcN-hy-71u"/>
                         <outlet property="starBar" destination="WPV-oy-6QA" id="VX1-xs-iEk"/>
                         <outlet property="submitButton" destination="INg-Zh-1kk" id="eOc-jS-UbA"/>
@@ -691,7 +694,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Cap-MM-QfC" secondAttribute="trailing" id="uJP-rD-tNT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oUm-0f-39c"/>
+                    <navigationItem key="navigationItem" title="Recommendations" id="oUm-0f-39c"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="majorPicker" destination="Cap-MM-QfC" id="JqK-Up-hgj"/>
@@ -854,11 +857,11 @@
             </objects>
             <point key="canvasLocation" x="1973" y="372"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Recommendations-->
         <scene sceneID="GUi-97-npm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hig-NZ-Fdb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="jGs-q7-Zoe"/>
+                    <tabBarItem key="tabBarItem" title="Recommendations" image="star" id="jGs-q7-Zoe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vkb-7l-5lz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -873,11 +876,11 @@
             </objects>
             <point key="canvasLocation" x="3573" y="1196"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Find Movies-->
         <scene sceneID="DqK-ae-dzd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Zb-nJ-qA2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="jVj-60-Qoq"/>
+                <navigationController title="Find Movies" automaticallyAdjustsScrollViewInsets="NO" id="4Zb-nJ-qA2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Find Movies" image="Reel" id="jVj-60-Qoq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DCC-kL-vys">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -892,12 +895,14 @@
             </objects>
             <point key="canvasLocation" x="2766" y="275"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="Odn-lx-EbO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muT-vJ-UMx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="QrB-T4-pFd">
-                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="bucketTab" id="QrB-T4-pFd">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value="B81D63DA-2C3C-4530-8D3E-6B157A8DD397"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bwz-U0-B0g">
@@ -933,11 +938,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="256" height="256"/>
+        <image name="Logo" width="200" height="200"/>
+        <image name="Reel" width="40" height="40"/>
+        <image name="bucketTab" width="26" height="28"/>
         <image name="defaultPhoto" width="128" height="128"/>
+        <image name="star" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hql-Jl-ZsT"/>
-        <segue reference="I51-Ok-MPb"/>
+        <segue reference="X8u-mo-KTJ"/>
     </inferredMetricsTieBreakers>
 </document>
