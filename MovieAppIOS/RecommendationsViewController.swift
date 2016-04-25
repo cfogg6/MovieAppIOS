@@ -57,19 +57,14 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         performSegueWithIdentifier("RecommendationsMovieDetails", sender: moviesArray[indexPath.row])
-        print("You selected cell #\(indexPath.row)!")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "RecommendationsMovieDetails" {
             if let movieDetailViewController = segue.destinationViewController as? MovieDetailViewController {
                 let pfSender = sender as! PFObject
-                print(PFUser.currentUser()!.username)
-                print(PFUser.currentUser()!["major"])
-                print(pfSender["title"])
-                print(pfSender["rating"])
-                print(pfSender["comment"])
-                let nsSender = NSDictionary(objects: [(PFUser.currentUser()!.username)!, pfSender["title"], pfSender["rating"], pfSender["comment"], (PFUser.currentUser()!["major"])!], forKeys: ["username", "title", "rating", "comment", "major"])
+                let posters:Dictionary<String, String> = ["profile": pfSender["photoId"]! as! String]
+                let nsSender = NSDictionary(objects: [(PFUser.currentUser()!.username)!, pfSender["title"], pfSender["rating"], pfSender["comment"], (PFUser.currentUser()!["major"])!, posters], forKeys: ["username", "title", "rating", "comment", "major", "posters"])
                 movieDetailViewController.movie = nsSender
             }
         }
@@ -109,6 +104,7 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
                     // Do something with the found objects
                     if let objects = objects {
                         self.moviesArray = objects
+                        self.mergeRatings()
                         dispatch_async(dispatch_get_main_queue(), {
                             self.movieTable.reloadData()
                         })
@@ -124,6 +120,10 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
                 print("Error: \(error!) \(error!.userInfo)")
             }
         })
+    }
+    
+    func mergeRatings() {
+        
     }
 
     /*

@@ -26,15 +26,12 @@ class MovieDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        print((movie["posters"] as! NSDictionary))
-
         if let checkedUrl = NSURL(string: (movie["posters"] as! NSDictionary)["profile"] as! String) {
             movieImage.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl)
         }
         super.viewWillAppear(animated)
         starBar.settings.fillMode = .Half
-        print(movie["title"])
         self.titleLabel.text = movie["title"] as? String
         let query = PFQuery(className: "Ratings")
         query.whereKey("username", equalTo: PFUser.currentUser()!.username!)
@@ -84,13 +81,9 @@ class MovieDetailViewController: UIViewController {
     }
     
     func downloadImage(url: NSURL){
-        print("Download Started")
-        print("lastPathComponent: " + (url.lastPathComponent ?? ""))
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
-                print(response?.suggestedFilename ?? "")
-                print("Download Finished")
                 let image = UIImage(data: data)
                 self.movieImage.image = image
                 let size = CGSizeMake(100, 150)

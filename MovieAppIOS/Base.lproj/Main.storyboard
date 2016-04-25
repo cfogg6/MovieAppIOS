@@ -204,19 +204,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-iF-hCx">
-                                <rect key="frame" x="20" y="80" width="560" height="411"/>
+                                <rect key="frame" x="20" y="80" width="560" height="339"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Dj-ec-tTm">
-                                        <rect key="frame" x="180" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="216" y="0.0" width="128" height="128"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Salty Popcorn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOD-CF-6nA">
-                                        <rect key="frame" x="0.0" y="212" width="560" height="40"/>
+                                        <rect key="frame" x="0.0" y="140" width="560" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-OM-VlF">
-                                        <rect key="frame" x="0.0" y="264" width="560" height="147"/>
+                                        <rect key="frame" x="0.0" y="192" width="560" height="147"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-uH-Q3b">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -535,10 +535,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-Kn-lXx">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-Kn-lXx">
                                 <rect key="frame" x="20" y="74" width="560" height="476"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-9d-gpl">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-9d-gpl">
                                         <rect key="frame" x="255" y="0.0" width="50" height="50"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pl-Gi-WLC">
@@ -597,6 +597,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="vWQ-Kn-lXx" secondAttribute="trailing" id="Aox-Fx-k7X"/>
+                            <constraint firstItem="pnu-Rd-cxu" firstAttribute="top" secondItem="vWQ-Kn-lXx" secondAttribute="bottom" constant="1" id="HkW-LW-6qk"/>
                             <constraint firstItem="vWQ-Kn-lXx" firstAttribute="top" secondItem="Qbj-7o-cnR" secondAttribute="bottom" constant="10" id="amI-vh-pde"/>
                             <constraint firstItem="vWQ-Kn-lXx" firstAttribute="leading" secondItem="q4b-nV-qDZ" secondAttribute="leadingMargin" id="bKK-E7-UUB"/>
                         </constraints>
