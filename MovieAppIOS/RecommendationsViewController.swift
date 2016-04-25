@@ -123,6 +123,29 @@ class RecommendationsViewController: UIViewController, UIPickerViewDataSource, U
     }
     
     func mergeRatings() {
+        var index1: Int = 0;
+        var movie: PFObject;
+        var movieArray = [PFObject]()
+        while index1 < moviesArray.count {
+            movie = moviesArray[index1]
+            var index2: Int = index1 + 1
+            while index2 < moviesArray.count {
+                if (movie["title"] as! String == moviesArray[index2]["title"] as! String) {
+                    movieArray.append(movie)
+                    moviesArray.removeAtIndex(index2)
+                    index2 -= 1
+                }
+                index2 += 1;
+            }
+            var rating: Int = 0
+            for object in movieArray {
+                rating += object["rating"] as! Int
+            }
+            print(index1)
+            
+            moviesArray[index1].setObject(rating, forKey: "rating")
+            index1 += 1;
+        }
         
     }
 
